@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKR Investment Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="calculator">
+        <h1>🇵🇰 PKR Investment Calculator</h1>
+        
+        <!-- Input Section -->
+        <div class="input-section">
+            <label>Initial Investment (PKR): <input type="number" id="initialInvestment" value="100000"></label>
+            <label>Monthly Investment (PKR): <input type="number" id="monthlyInvestment" value="10000"></label>
+            <label>Yearly Increase (%): <input type="number" id="yearlyIncrease" value="5"></label>
+            <label>Expected Return (%): <input type="number" id="expectedReturn" value="12"></label>
+            <label>Inflation (%): <input type="number" id="inflation" value="7"></label>
+            <label>Years: <input type="number" id="years" value="10"></label>
+            <label>Start SWP After (Years): <input type="number" id="swpStart" value="5"></label>
+            <label>Monthly SWP (PKR): <input type="number" id="monthlySWP" value="20000"></label>
+            <button onclick="calculate()">Calculate</button>
+        </div>
+
+        <!-- Results Section -->
+        <div class="results">
+            <div class="chart-container">
+                <canvas id="growthChart"></canvas>
+            </div>
+            <div id="summary"></div>
+            <table id="resultsTable">
+                <!-- Filled by JavaScript -->
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
